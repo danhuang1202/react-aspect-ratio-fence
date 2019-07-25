@@ -1,10 +1,6 @@
-artifacts/
 __tests__/
 src/
 stories/
-coverage/
-sd.allow
-screwdriver.yaml
 package-lock.json
 .storybook
 .eslintignore
@@ -12,6 +8,5 @@ package-lock.json
 .gitignore
 .prettierignore
 .prettierrc
-.npmrc
 .vscode
 docs/
