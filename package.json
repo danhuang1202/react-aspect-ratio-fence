@@ -8,8 +8,6 @@
   "style": "css/style.css",
   "scripts": {
     "ci-build": "npm run build:bundle && npm run build:type",
-    "ci-lint": "npm run lint",
-    "ci-test": "ENABLE_COVERAGE=true COVERAGE_DIRECTORY=${SD_ARTIFACTS_DIR}/coverage  npm run test",
     "ci-build:docs": "npm run build:docs",
     "ci-publish:docs": "gh-pages -d docs",
     "build:bundle": "rollup -c ./config/rollup.config.js",
@@ -40,7 +38,8 @@
   },
   "keywords": [
     "react",
-    "universal cards"
+    "aspect ratio",
+    "square image"
   ],
   "author": "danhuang",
   "license": "ISC",
