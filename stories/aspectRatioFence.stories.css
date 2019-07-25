@@ -1,0 +1,11 @@
+div.wrap {
+  display: inline-flex;
+  width: calc(1024px - 20px);
+  margin: 20px;
+}
+
+@media (max-width: 1024px) {
+  div.wrap {
+    width: calc(100% - 20px);
+  }
+}
