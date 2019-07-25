@@ -1,7 +1,12 @@
 language: node_js
 node_js:
   - '10'
-
+stages:
+  - lint and unit test
+  - name: tag
+    if: branch = master
+  - name: publish
+    if: branch = master
 jobs:
   include:
     - stage: lint and unit test
@@ -13,12 +18,10 @@ jobs:
     - script: npm run lint
       name: lint
     - stage: tag
-      if: branch = master
       script: 
         - npm install semantic-release -g
         - npx semantic-release
     - stage: publish
-      if: branch = master
       name: npm publish
       script: npm run ci-build
       deploy:
