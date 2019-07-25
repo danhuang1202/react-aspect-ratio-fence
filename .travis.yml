@@ -4,11 +4,6 @@ node_js:
 
 jobs:
   include:
-    - stage: lint and unit test
-      name: unit test
-      script: npm run lint
-    - script: npm run test
-      name: lint
     - stage: Release
       script: npx semantic-release
     - stage: npm publish
@@ -16,7 +11,7 @@ jobs:
       deploy:
         provider: npm
         email: danhaung1202@gmail.com
-        api_key: $API_KEY
+        api_key: $NPM_TOKEN
         tag: current
         skip_cleanup: true
         on:
