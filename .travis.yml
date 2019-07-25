@@ -5,11 +5,12 @@ node_js:
 jobs:
   include:
     - stage: lint and unit test
+      name: unit test
       script: npm run lint
     - script: npm run test
-    - stage: build
-      script: npm run ci-build
+      name: lint
     - stage: npm publish
+      script: npm run ci-build
       deploy:
         provider: npm
         email: danhaung1202@gmail.com
