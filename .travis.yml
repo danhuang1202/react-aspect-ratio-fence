@@ -26,7 +26,6 @@ jobs:
         skip_cleanup: true
         email: $EMAIL
         api_key: $NPM_TOKEN
-        tag: current
         on:
           branch: master
     - script: npm run ci-build:docs
