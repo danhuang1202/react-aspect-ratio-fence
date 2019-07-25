@@ -7,6 +7,7 @@ jobs:
     - stage: Release
       script: npx semantic-release
     - stage: npm publish
+      if: branch = master
       script: npm run ci-build
       deploy:
         provider: npm
