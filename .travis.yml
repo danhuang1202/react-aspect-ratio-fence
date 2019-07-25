@@ -1,16 +1,20 @@
 language: node_js
 node_js:
   - '10'
-script:
-  - npm run lint
-  - npm run test
-before_deploy:
-  - npm run ci-build
-deploy:
-  provider: npm
-  email: danhaung1202@gmail.com
-  api_key: $API_KEY
-  on:
-    branch: master
-    tags: true
-  skip_cleanup: true
+
+jobs:
+  include:
+    - stage: lint and unit test
+      script: npm run lint
+    - script: npm run test
+    - stage: build
+      script: npm run ci-build
+    - stage: npm publish
+      deploy:
+        provider: npm
+        email: danhaung1202@gmail.com
+        api_key: $API_KEY
+        tag: current
+        skip_cleanup: true
+        on:
+          branch: master
