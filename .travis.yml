@@ -5,21 +5,12 @@ branches:
   only:
   - master
 stages:
-  - lint and unit test
   - name: tag
     if: branch = master
   - name: publish
     if: branch = master
 jobs:
   include:
-    - stage: lint and unit test
-      name: unit test
-      script: 
-        - npm run ci-test
-        - npm install codecov -g
-        - codecov
-    - script: npm run lint
-      name: lint
     - stage: tag
       script: 
         - npm install semantic-release
