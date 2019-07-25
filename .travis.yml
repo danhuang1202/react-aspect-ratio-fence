@@ -23,7 +23,7 @@ jobs:
     - stage: tag
       script: 
         - npm install semantic-release -g
-        - npx semantic-release
+        - npx semantic-release -p ['@semantic-release/commit-analyzer', '@semantic-release/release-notes-generator', '@semantic-release/github', '@semantic-release/git']
     - stage: publish
       name: npm publish
       script: npm run ci-build
