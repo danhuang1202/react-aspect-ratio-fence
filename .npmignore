@@ -1,7 +1,3 @@
-__tests__/
-src/
-stories/
-package-lock.json
 .storybook
 .eslintignore
 .eslintrc
@@ -9,4 +5,9 @@ package-lock.json
 .prettierignore
 .prettierrc
 .vscode
+.github
+__tests__/
+src/
+stories/
 docs/
+package-lock.json
