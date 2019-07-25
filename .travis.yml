@@ -12,4 +12,5 @@ deploy:
   api_key: $API_KEY
   on:
     branch: master
+    tags: true
   skip_cleanup: true
