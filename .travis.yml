@@ -4,16 +4,37 @@ node_js:
 
 jobs:
   include:
-    - stage: Release
-      script: npx semantic-release
-    - stage: npm publish
+    - stage: lint and unit test
+      name: unit test
+      script: 
+        - npm run ci-test
+        - npm install codecov -g
+        - codecov
+    - script: npm run lint
+      name: lint
+    - stage: tag
       if: branch = master
+      script: 
+        - npm install semantic-release -g
+        - npx semantic-release
+    - stage: publish
+      if: branch = master
+      name: npm publish
       script: npm run ci-build
       deploy:
         provider: npm
-        email: danhaung1202@gmail.com
+        skip_cleanup: true
+        email: $NEMAIL
         api_key: $NPM_TOKEN
         tag: current
+        on:
+          branch: master
+    - script: npm run ci-build:docs
+      name: gitHub pages
+      deploy:
+        provider: pages
         skip_cleanup: true
+        github_token: $GITHUB_TOKEN
+        keep_history: true
         on:
           branch: master
