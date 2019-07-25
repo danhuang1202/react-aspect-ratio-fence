@@ -6,6 +6,7 @@
 .prettierrc
 .vscode
 .github
+.travis.yml
 __tests__/
 src/
 stories/
