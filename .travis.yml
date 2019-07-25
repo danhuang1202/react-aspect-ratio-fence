@@ -1,6 +1,9 @@
 language: node_js
 node_js:
   - '10'
+branches:
+  only:
+  - master
 stages:
   - lint and unit test
   - name: tag
@@ -27,9 +30,8 @@ jobs:
       deploy:
         provider: npm
         skip_cleanup: true
-        email: $NEMAIL
+        email: $EMAIL
         api_key: $NPM_TOKEN
-        tag: current
         on:
           branch: master
     - script: npm run ci-build:docs
