@@ -22,7 +22,7 @@ jobs:
       name: lint
     - stage: tag
       script: 
-        - npm install semantic-release -g
+        - npm install semantic-release
         - npx semantic-release -p ['@semantic-release/commit-analyzer', '@semantic-release/release-notes-generator', '@semantic-release/github', '@semantic-release/git']
     - stage: publish
       name: npm publish
