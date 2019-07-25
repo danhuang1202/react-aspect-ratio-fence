@@ -1,5 +1,5 @@
 # react-aspect-ratio-fence
-### [![Build Status](https://travis-ci.org/danhuang1202/react-aspect-ratio-fence.svg?branch=master)](https://travis-ci.org/danhuang1202/react-aspect-ratio-fence) [![js-standard-style][standard-image]][standard-url] [![code style: prettier][prettier-image]][prettier-url]
+### [![Build Status](https://travis-ci.org/danhuang1202/react-aspect-ratio-fence.svg?branch=master)](https://travis-ci.org/danhuang1202/react-aspect-ratio-fence) [![codecov](https://codecov.io/gh/danhuang1202/react-aspect-ratio-fence/branch/master/graph/badge.svg)](https://codecov.io/gh/danhuang1202/react-aspect-ratio-fence) [![js-standard-style][standard-image]][standard-url] [![code style: prettier][prettier-image]][prettier-url]
 [status-image]: https://screwdriver.ouroath.com/pipelines/1011642/badge
 [status-url]: https://screwdriver.ouroath.com/pipelines/1011642
 [standard-image]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg
