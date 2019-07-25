@@ -1,0 +1,15 @@
+language: node_js
+deploy:
+  provider: npm
+  email: danhaung1202@gmail.com
+  api_key:
+    secure: s3O0sT+pFYitqNxrDO/g6ZXlYYb0ejRN4UUxw0mDS+nSEQ76XRBN3F4OK9c0BiLVLpjtIGX4b32+yVLlwN/qJfyZCvfSookhHTfSdMsIkPSu/QO59eCi5xi1MMBYbffw6XEVk7jBp52CsVcVxSly3kllhXVxiY/VpP8VM1Bf0geY9Dg8LT9UsjnXOuQf6B2cIY9NkebErb0idLPQVUZxc4JG3bLkPujy1TBZlXhKM14USR1TwoR2ljDrUycLK5nGPcX6ew9i6UZ7rkHQWxyRAcskljZeTaAhagInvxfOHWXpquN93NYpuiHTrwBf5/hBp0jnWmyIWcaPvZZi1lzL0lPHMMy6Za1T/+V/ZXSYhczliUvR85Z9kK5TD+nXbldD9xOdYAQfTCBK6dNzgKn4bn/RHrQRkvTtVze2bEa3GPCKHwQwBaewPWAqD0qQyfn0Dq5gi5vtgr2v886MJBWrGmphh+GqHz/h8/0frpYmSkyebsdpdD3H5kfDRCT4bu5NvmfbwxxDSAxPIR638f3PV04y/PVxYl9vCMNs3u79FjWZUWwEXr2aX3WzvpAm6IFi+DvqX2exYr8KjwtGYRl537E24+jq9QYXdgbQVqj8cRZZuWJvJXPsAauZAmf8dEbfIhL5yaicclI9xvD1xPQiwYxlQ1WKsN6fbPIifYz3rBY=
+  on:
+    branch: master
+after_deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+  keep_history: true
+  on:
+    branch: master
