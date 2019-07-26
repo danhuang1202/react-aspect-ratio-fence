@@ -7,7 +7,7 @@
   "types": "type/index.d.ts",
   "style": "css/style.css",
   "scripts": {
-    "ci-test": "ENABLE_COVERAGE=true COVERAGE_DIRECTORY=coverage  npm run test",
+    "ci-test": "ENABLE_COVERAGE=true COVERAGE_DIRECTORY=coverage npm run test && codecov",
     "ci-publish": "npx semantic-release",
     "ci-build": "npm run build:bundle && npm run build:type",
     "ci-build:docs": "npm run build:docs",
@@ -41,16 +41,10 @@
   "keywords": [
     "react",
     "aspect ratio",
-    "square image"
+    "square"
   ],
   "author": "danhuang",
   "license": "ISC",
-  "yahoo": {
-    "bugzilla": {
-      "product": "EC F2E",
-      "component": "react-aspect-ratio-fence"
-    }
-  },
   "dependencies": {
     "classnames": "^2.2.6",
     "react": "^16.0.0",
@@ -86,6 +80,7 @@
     "babel-jest": "^24.8.0",
     "babel-loader": "^8.0.5",
     "babel-plugin-css-modules-transform": "^1.6.2",
+    "codecov": "^3.5.0",
     "commitizen": "^4.0.3",
     "cz-conventional-changelog": "^3.0.2",
     "eslint": "^5.16.0",
