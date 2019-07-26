@@ -1,18 +1,32 @@
-import React, { FunctionComponent, ReactNode } from 'react'
+import { createElement, FunctionComponent, ReactNode } from 'react'
 import cns from 'classnames'
 
 // @ts-ignore
 import styles from './style.css'
 
 type Props = {
+  /**
+   *  html tag neme
+   *  @default div
+   * */
+  elementType?: string
   /** Custom class name */
   customClass?: string
   /** custom children node */
   children?: ReactNode
 }
 
-const SquareFence: FunctionComponent<Props> = ({ customClass, children }) => {
-  return <div className={cns(styles.wrap, customClass)}>{children}</div>
-}
+const SquareFence: FunctionComponent<Props> = ({
+  elementType = 'div',
+  customClass,
+  children
+}) =>
+  createElement(
+    elementType,
+    {
+      className: cns(styles.wrap, customClass)
+    },
+    children
+  )
 
 export default SquareFence

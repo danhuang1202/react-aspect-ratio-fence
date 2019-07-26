@@ -15,4 +15,19 @@ describe('[snapshot] AspectRatioFence', () => {
     )
     expect(dom).toMatchSnapshot()
   })
+
+  it('AspectRatioFenceLegacy with custom outerElementType and innerELementType', () => {
+    const props = {
+      outerElementType: 'ul',
+      innerELementType: 'li',
+      ratio: 16 / 9
+    }
+
+    const dom = renderer.create(
+      <AspectRatioFenceLegacy {...props}>
+        <img alt="AspectRatioFence" src="AspectRatioFence.png" />
+      </AspectRatioFenceLegacy>
+    )
+    expect(dom).toMatchSnapshot()
+  })
 })

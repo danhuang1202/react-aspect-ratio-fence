@@ -15,4 +15,18 @@ describe('[snapshot] AspectRatioFence', () => {
     )
     expect(dom).toMatchSnapshot()
   })
+
+  it('AspectRatioFence with custom elementType', () => {
+    const props = {
+      elementType: 'section',
+      ratio: 4 / 3
+    }
+
+    const dom = renderer.create(
+      <AspectRatioFence {...props}>
+        <img alt="AspectRatioFence" src="AspectRatioFence.png" />
+      </AspectRatioFence>
+    )
+    expect(dom).toMatchSnapshot()
+  })
 })

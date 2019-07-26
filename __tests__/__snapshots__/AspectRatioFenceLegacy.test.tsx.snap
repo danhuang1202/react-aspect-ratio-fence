@@ -19,3 +19,23 @@ exports[`[snapshot] AspectRatioFence AspectRatioFenceLegacy 1`] = `
   </div>
 </div>
 `;
+
+exports[`[snapshot] AspectRatioFence AspectRatioFenceLegacy with custom outerElementType and innerELementType 1`] = `
+<ul
+  className="AspectRatioFenceLegacy_wrap_ZYFye"
+>
+  <div
+    className="AspectRatioFenceLegacy_container_3VjLm"
+    style={
+      Object {
+        "paddingBottom": "56.25%",
+      }
+    }
+  >
+    <img
+      alt="AspectRatioFence"
+      src="AspectRatioFence.png"
+    />
+  </div>
+</ul>
+`;

@@ -1,6 +1,6 @@
 import { storiesOf } from '@storybook/react'
 import React from 'react'
-import AspectRatioFence from '@components/AspectRatioFence'
+import AspectRatioFenceLegacy from '@components/AspectRatioFenceLegacy'
 import { withInfo } from '@storybook/addon-info'
 import { withKnobs, text, number } from '@storybook/addon-knobs'
 // @ts-ignore
@@ -14,9 +14,10 @@ storiesOf('Components', module)
       inline: true
     })
   )
-  .add('AspectRatioFence', () => (
-    <AspectRatioFence
-      elementType={text('elementType', 'div')}
+  .add('AspectRatioFenceLegacy', () => (
+    <AspectRatioFenceLegacy
+      outerElementType={text('outerElementType', 'ul')}
+      innerElementType={text('innerElementType', 'li')}
       ratio={number('ratio', 16 / 9)}
       customClass={text('customClass', style.wrap)}
     >
@@ -35,5 +36,5 @@ storiesOf('Components', module)
           style={{ width: '100%', height: '100%', objectFit: 'cover' }}
         />
       </picture>
-    </AspectRatioFence>
+    </AspectRatioFenceLegacy>
   ))

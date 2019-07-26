@@ -10,3 +10,14 @@ exports[`[snapshot] SquareFence SquareFence 1`] = `
   />
 </div>
 `;
+
+exports[`[snapshot] SquareFence SquareFence with custom elementType 1`] = `
+<span
+  className="SquareFence_wrap_3jTo2"
+>
+  <img
+    alt="SquareFence"
+    src="SquareFence.png"
+  />
+</span>
+`;

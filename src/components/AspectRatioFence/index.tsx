@@ -1,10 +1,15 @@
-import React, { FunctionComponent, ReactNode } from 'react'
+import { createElement, FunctionComponent, ReactNode } from 'react'
 import cns from 'classnames'
 
 // @ts-ignore
 import styles from './style.css'
 
 interface Props {
+  /**
+   *  html tag neme
+   *  @default div
+   * */
+  elementType?: string
   /**
    *  The aspect ratio of an image describes the proportional
    *  relationship between width and height.
@@ -18,17 +23,15 @@ interface Props {
 }
 
 const AspectRatioFence: FunctionComponent<Props> = ({
+  elementType = 'div',
   ratio = 1,
   customClass,
   children
-}) => (
-  <div
-    // @ts-ignore
-    style={{ '--ratio': `(${ratio})` }}
-    className={cns(styles.wrap, customClass)}
-  >
-    {children}
-  </div>
-)
+}) =>
+  createElement(elementType, {
+    style: { '--ratio': `(${ratio})` },
+    className: cns(styles.wrap, customClass),
+    children
+  })
 
 export default AspectRatioFence
