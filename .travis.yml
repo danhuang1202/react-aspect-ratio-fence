@@ -2,32 +2,16 @@ language: node_js
 node_js:
   - '10'
 stages:
-  - name: tag
-    if: branch = master
   - name: publish
     if: branch = master
 jobs:
   include:
-    - stage: tag
-      script: 
-        - npm run ci-tag
     - stage: publish
       name: npm publish
-      script: npm run ci-build
-      deploy:
-        provider: npm
-        skip_cleanup: true
-        email: $EMAIL
-        api_key: $NPM_TOKEN
-        on:
-          branch: master
-    - script: npm run ci-build:docs
+      script: 
+        - npm run ci-build
+        - npm run ci-publish
+    - script: 
+        - npm run ci-build:docs
+        - ci-publish:docs
       name: gitHub pages
-      deploy:
-        provider: pages
-        skip_cleanup: true
-        github_token: $GITHUB_TOKEN
-        local_dir: ./docs
-        keep_history: true
-        on:
-          branch: master
