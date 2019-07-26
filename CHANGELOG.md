@@ -1,3 +1,10 @@
+# [1.8.0](https://github.com/danhuang1202/react-aspect-ratio-fence/compare/v1.7.0...v1.8.0) (2019-07-26)
+
+
+### Features
+
+* support custom element type ([8a08f06](https://github.com/danhuang1202/react-aspect-ratio-fence/commit/8a08f06))
+
 # [1.7.0](https://github.com/danhuang1202/react-aspect-ratio-fence/compare/v1.6.0...v1.7.0) (2019-07-26)
 
 
