@@ -1,6 +1,6 @@
 {
   "name": "react-aspect-ratio-fence",
-  "version": "0.0.0",
+  "version": "1.5.0",
   "description": "Set Custom Aspect Ratio to the Wrap Element(fence)",
   "main": "lib/index.js",
   "module": "es/index.js",
