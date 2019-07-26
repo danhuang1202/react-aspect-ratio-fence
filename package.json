@@ -18,7 +18,7 @@
     "lint": "eslint './{src,__tests__,.stories}/**/*.{ts,tsx}'",
     "test": "BABEL_ENV=test jest --no-cache --config ./config/jest.config.js --coverage=$ENABLE_COVERAGE --coverageDirectory=$COVERAGE_DIRECTORY",
     "test:update": "npm run test -- -u",
-    "prettier": "prettier --write './{src,__tests__}/**/*/*.{tsx,ts}'"
+    "prettier": "prettier --check ./**/*.{ts,tsx,js,css,json}"
   },
   "husky": {
     "hooks": {
