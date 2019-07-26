@@ -7,7 +7,7 @@
 [prettier-image]: https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square
 [prettier-url]: https://github.com/prettier/prettier
 
-for more information, please see: <a href="https://git.ouroath.com/pages/danhuang/react-aspect-ratio-fence/">Document</a>
+for more information, please see: <a href="https://danhuang1202.github.io/react-aspect-ratio-fence/">Document</a>
 
 
 ## Installation
