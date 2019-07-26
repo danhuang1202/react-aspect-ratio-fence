@@ -3,7 +3,6 @@
 exports[`[snapshot] SquareFence SquareFence 1`] = `
 <div
   className="SquareFence_wrap_3jTo2"
-  ratio={1.7777777777777777}
 >
   <img
     alt="SquareFence"

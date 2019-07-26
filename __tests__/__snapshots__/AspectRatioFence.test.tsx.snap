@@ -3,7 +3,6 @@
 exports[`[snapshot] AspectRatioFence AspectRatioFence 1`] = `
 <div
   className="AspectRatioFence_wrap_2HH2L"
-  ratio={1.7777777777777777}
   style={
     Object {
       "--ratio": "(1.7777777777777777)",

@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from 'react'
+import React, { FunctionComponent, ReactNode } from 'react'
 import cns from 'classnames'
 
 // @ts-ignore
@@ -13,12 +13,14 @@ interface Props {
   ratio: number
   /** Custom class name */
   customClass?: string
+  /** custom children node */
+  children?: ReactNode
 }
 
 const AspectRatioFenceLegacy: FunctionComponent<Props> = ({
   ratio = 1,
   customClass,
-  ...props
+  children
 }) => {
   return (
     <div className={cns(styles.wrap, customClass)}>
@@ -27,8 +29,9 @@ const AspectRatioFenceLegacy: FunctionComponent<Props> = ({
           paddingBottom: `${100 / ratio}%`
         }}
         className={styles.container}
-        {...props}
-      />
+      >
+        {children}
+      </div>
     </div>
   )
 }

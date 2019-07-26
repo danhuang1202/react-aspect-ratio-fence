@@ -24,17 +24,9 @@ npm i react-aspect-ratio-fence
 
   aspect ratio placeholder
 
-- AspectRatioImg
-
-  aspect ratio placeholder with `<img>`
-
 - SquareFence
 
   square placeholder
-
-- SquareImg
-
-  square placeholder with `<img>`
 
 ## Way to Ride
 - Common jS
@@ -43,30 +35,30 @@ npm i react-aspect-ratio-fence
 const uc = require('react-aspect-ratio-fence')
 require('react-aspect-ratio-fence/css/style.css')
 
-  <uc.AspectRatio {...props} />
-  <uc.SquareImg {...props} />
+  <uc.AspectRatioFence {...props} />
+  <uc.SquareFence {...props} />
 
 // only import specific component
-const AspectRatio = require('react-aspect-ratio-fence/lib/components/AspectRatio')
-require('react-aspect-ratio-fence/css/components/AspectRatio/style.css')
+const AspectRatioFence = require('react-aspect-ratio-fence/lib/components/AspectRatioFence')
+require('react-aspect-ratio-fence/css/components/AspectRatioFence/style.css')
 
-  <AspectRatio {...props} />
+  <AspectRatioFence {...props} />
 ```
 
 - ESM
 ```
 // import from package entry point
-import { AspectRatio, SquareImg } from 'react-aspect-ratio-fence'
+import { AspectRatioFence, SquareFence } from 'react-aspect-ratio-fence'
 import 'react-aspect-ratio-fence/css/style.css'
 
-  <AspectRatio {...props} />
-  <SquareImg {...props} />
+  <AspectRatioFence {...props} />
+  <SquareFence {...props} />
 
 // only import specific component
-import AspectRatio from 'react-aspect-ratio-fence/es/components/AspectRatio'
-import 'react-aspect-ratio-fence/css/components/AspectRatio/style.css'
+import AspectRatioFence from 'react-aspect-ratio-fence/es/components/AspectRatioFence'
+import 'react-aspect-ratio-fence/css/components/AspectRatioFence/style.css'
 
-  <AspectRatio {...props} />
+  <AspectRatioFence {...props} />
 ```
 
 ## Development by storybook

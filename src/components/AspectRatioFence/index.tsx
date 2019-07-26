@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from 'react'
+import React, { FunctionComponent, ReactNode } from 'react'
 import cns from 'classnames'
 
 // @ts-ignore
@@ -11,31 +11,24 @@ interface Props {
    *   @default 1
    **/
   ratio: number
-  /** css style */
-  style?: object
   /** Custom class name */
   customClass?: string
+  /** custom children node */
+  children?: ReactNode
 }
 
 const AspectRatioFence: FunctionComponent<Props> = ({
   ratio = 1,
-  style,
   customClass,
-  ...props
-}) => {
-  const styleWithCustomProperty = {
-    ...style,
-    '--ratio': `(${ratio})`
-  }
-  return (
-    <div
-      // @ts-ignore
-      style={styleWithCustomProperty}
-      className={cns(styles.wrap, customClass)}
-      ratio={ratio}
-      {...props}
-    />
-  )
-}
+  children
+}) => (
+  <div
+    // @ts-ignore
+    style={{ '--ratio': `(${ratio})` }}
+    className={cns(styles.wrap, customClass)}
+  >
+    {children}
+  </div>
+)
 
 export default AspectRatioFence
