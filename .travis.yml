@@ -13,5 +13,5 @@ jobs:
         - npm run ci-publish
     - script: 
         - npm run ci-build:docs
-        - ci-publish:docs
+        - npm run ci-publish:docs
       name: gitHub pages
