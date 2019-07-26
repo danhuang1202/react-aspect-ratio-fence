@@ -2,7 +2,7 @@ language: node_js
 node_js:
   - '10'
 stages:
-  - name: lint and unit test
+  - name: lint and test
   - name: publish
     if: branch = master
 jobs:
