@@ -102,6 +102,7 @@
     "rollup-plugin-node-resolve": "^4.2.3",
     "rollup-plugin-peer-deps-external": "^2.2.0",
     "rollup-plugin-postcss": "^2.0.3",
+    "semantic-release": "^15.13.18",
     "typescript": "^3.4.4"
   }
 }
