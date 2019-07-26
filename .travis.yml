@@ -11,7 +11,13 @@ jobs:
       script: 
         - npm run ci-build
         - npm run ci-publish
-    - script: 
-        - npm run ci-build:docs
-        - npm run ci-publish:docs
+    - script: npm run ci-build:docs
       name: gitHub pages
+      deploy:
+        provider: pages
+        skip_cleanup: true
+        github_token: $GITHUB_TOKEN
+        local_dir: docs
+        keep_history: true
+        on:
+          branch: master
