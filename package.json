@@ -8,6 +8,7 @@
   "style": "css/style.css",
   "scripts": {
     "ci-test": "ENABLE_COVERAGE=true COVERAGE_DIRECTORY=coverage  npm run test",
+    "ci-tag": "npx semantic-release",
     "ci-build": "npm run build:bundle && npm run build:type",
     "ci-build:docs": "npm run build:docs",
     "ci-publish:docs": "gh-pages -d docs",
@@ -65,6 +66,8 @@
     "@babel/preset-env": "^7.4.4",
     "@babel/preset-react": "^7.0.0",
     "@babel/preset-typescript": "^7.3.3",
+    "@semantic-release/changelog": "^3.0.4",
+    "@semantic-release/git": "^7.0.16",
     "@storybook/addon-info": "^5.0.11",
     "@storybook/addon-knobs": "^5.0.11",
     "@storybook/addon-viewport": "^5.0.11",
