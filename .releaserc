@@ -11,7 +11,7 @@
         "noteKeywords": ["BREAKING CHANGE", "BREAKING CHANGES", "BREAKING"]
       }
     }],
-    ["semantic-release/release-notes-generator", {
+    ["@semantic-release/release-notes-generator", {
       "config": "commitizen",
       "parserOpts": {
         "noteKeywords": ["BREAKING CHANGE", "BREAKING CHANGES", "BREAKING"]
