@@ -8,7 +8,7 @@
   "style": "css/style.css",
   "scripts": {
     "ci-test": "ENABLE_COVERAGE=true COVERAGE_DIRECTORY=coverage  npm run test",
-    "ci-tag": "npx semantic-release",
+    "ci-publish": "npx semantic-release",
     "ci-build": "npm run build:bundle && npm run build:type",
     "ci-build:docs": "npm run build:docs",
     "ci-publish:docs": "gh-pages -d docs",
@@ -23,6 +23,7 @@
   },
   "husky": {
     "hooks": {
+      "prepare-commit-msg": "exec < /dev/tty && git cz --hook",
       "pre-commit": "lint-staged",
       "pre-push": "npm test"
     }
@@ -86,12 +87,14 @@
     "babel-jest": "^24.8.0",
     "babel-loader": "^8.0.5",
     "babel-plugin-css-modules-transform": "^1.6.2",
+    "commitizen": "^4.0.3",
+    "cz-conventional-changelog": "^3.0.2",
     "eslint": "^5.16.0",
     "eslint-config-prettier": "^4.1.0",
     "eslint-plugin-react": "^7.13.0",
     "eslint-plugin-react-hooks": "^1.6.0",
     "gh-pages": "^2.0.1",
-    "husky": "^2.2.0",
+    "husky": "^3.0.1",
     "jest": "^24.8.0",
     "lint-staged": "^8.1.6",
     "lodash.get": "^4.4.2",
@@ -107,5 +110,10 @@
     "rollup-plugin-postcss": "^2.0.3",
     "semantic-release": "^15.13.18",
     "typescript": "^3.4.4"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
