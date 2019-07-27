@@ -12,28 +12,50 @@ npm i react-aspect-ratio-fence
 ```
 
 ## Components
-- AspectRatioFence
+- AspectRatioFence (`no IE support`)
 
-  aspect ratio placeholder, `no IE support`
+  Set `ratio` as css [custom properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties), and [calc()](https://developer.mozilla.org/en-US/docs/Web/CSS/calc) the height of `elementType`'s [pseudo-element](https://developer.mozilla.org/en-US/docs/Web/CSS/::before) as placeholder. The defailt style will fit the `children` node into the placeholer.
+
+  | props | type | required | default | description |
+  | --- | --- | --- | --- | --- |
+  | elementType | string | false | div | html tag name for the wrap component |
+  | ratio	| number | true |	1	| The aspect ratio of an image describes the proportional relationship between width and height |
+  | customClass	| boolean |	false | undefined | Custom class name |
+  | children | ReactNode | false | undefined | custom children node |
 
 - AspectRatioFenceLegacy
 
-  aspect ratio placeholder
+  Caculate the height of `innerElementType` base on the width of `outerElementType` and `ratio`. The defailt style will fit the `children` node into the placeholer.
+
+  | props | type | required | default | description |
+  | --- | --- | --- | --- | --- |
+  | outerElementType | string | false | div | html tag name for the outer component |
+  | innerElementType | string | false | div | html tag name for the inner component  |
+  | ratio	| number | true |	1	| The aspect ratio of an image describes the proportional relationship between width and height |
+  | customClass	| boolean |	false | undefined | Custom class name |
+  | children | ReactNode | false | undefined | custom children node |
 
 - SquareFence
 
-  square placeholder
+  Set height of `elementType`'s [pseudo-element](https://developer.mozilla.org/en-US/docs/Web/CSS/::before) to the value of `elementType`'s width. The defailt style will fit the `children` node into the placeholer.
+
+  | props | type | required | default | description |
+  | --- | --- | --- | --- | --- |
+  | elementType | string | false | div | html tag name for the wrap component |
+  | customClass	| boolean |	false | undefined | Custom class name |
+  | children | ReactNode | false | undefined | custom children node |
 
 ## Way to Ride
 - Common jS
-```
+```js
 // import from package entry point
 const uc = require('react-aspect-ratio-fence')
 require('react-aspect-ratio-fence/css/style.css')
 
   <uc.AspectRatioFence {...props} />
   <uc.SquareFence {...props} />
-
+```
+```js
 // only import specific component
 const AspectRatioFence = require('react-aspect-ratio-fence/lib/components/AspectRatioFence')
 require('react-aspect-ratio-fence/css/components/AspectRatioFence/style.css')
@@ -42,14 +64,15 @@ require('react-aspect-ratio-fence/css/components/AspectRatioFence/style.css')
 ```
 
 - ESM
-```
+```js
 // import from package entry point
 import { AspectRatioFence, SquareFence } from 'react-aspect-ratio-fence'
 import 'react-aspect-ratio-fence/css/style.css'
 
   <AspectRatioFence {...props} />
   <SquareFence {...props} />
-
+```
+```js
 // only import specific component
 import AspectRatioFence from 'react-aspect-ratio-fence/es/components/AspectRatioFence'
 import 'react-aspect-ratio-fence/css/components/AspectRatioFence/style.css'

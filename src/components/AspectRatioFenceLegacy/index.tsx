@@ -6,12 +6,12 @@ import styles from './style.css'
 
 interface Props {
   /**
-   *  outter html tag neme
+   *  outter html tag name
    *  @default div
    * */
   outerElementType?: string
   /**
-   *  inner html tag neme
+   *  inner html tag name
    *  @default div
    * */
   innerElementType?: string
