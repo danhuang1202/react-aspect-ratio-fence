@@ -19,7 +19,7 @@ storiesOf('Components', module)
       outerElementType={text('outerElementType', 'ul')}
       innerElementType={text('innerElementType', 'li')}
       ratio={number('ratio', 16 / 9)}
-      customClass={text('customClass', style.wrap)}
+      className={text('className', style.wrap)}
     >
       <picture>
         <source

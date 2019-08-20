@@ -22,7 +22,7 @@ interface Props {
    **/
   ratio: number
   /** Custom class name */
-  customClass?: string
+  className?: string
   /** custom children node */
   children?: ReactNode
 }
@@ -31,13 +31,13 @@ const AspectRatioFenceLegacy: FunctionComponent<Props> = ({
   outerElementType = 'div',
   innerElementType = 'div',
   ratio = 1,
-  customClass,
+  className,
   children
 }) =>
   createElement(
     outerElementType,
     {
-      className: cns(styles.wrap, customClass)
+      className: cns(styles.wrap, className)
     },
     createElement(innerElementType, {
       style: {

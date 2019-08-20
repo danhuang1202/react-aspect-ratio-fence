@@ -11,20 +11,20 @@ type Props = {
    * */
   elementType?: string
   /** Custom class name */
-  customClass?: string
+  className?: string
   /** custom children node */
   children?: ReactNode
 }
 
 const SquareFence: FunctionComponent<Props> = ({
   elementType = 'div',
-  customClass,
+  className,
   children
 }) =>
   createElement(
     elementType,
     {
-      className: cns(styles.wrap, customClass)
+      className: cns(styles.wrap, className)
     },
     children
   )

@@ -17,7 +17,7 @@ interface Props {
    **/
   ratio: number
   /** Custom class name */
-  customClass?: string
+  className?: string
   /** custom children node */
   children?: ReactNode
 }
@@ -25,12 +25,12 @@ interface Props {
 const AspectRatioFence: FunctionComponent<Props> = ({
   elementType = 'div',
   ratio = 1,
-  customClass,
+  className,
   children
 }) =>
   createElement(elementType, {
     style: { '--ratio': `(${ratio})` },
-    className: cns(styles.wrap, customClass),
+    className: cns(styles.wrap, className),
     children
   })
 

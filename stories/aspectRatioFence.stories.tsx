@@ -18,7 +18,7 @@ storiesOf('Components', module)
     <AspectRatioFence
       elementType={text('elementType', 'div')}
       ratio={number('ratio', 16 / 9)}
-      customClass={text('customClass', style.wrap)}
+      className={text('className', style.wrap)}
     >
       <picture>
         <source
