@@ -1,3 +1,13 @@
+## <small>1.8.2 (2019-08-20)</small>
+
+* Merge pull request #3 from danhuang1202/styled-component ([f2b2cd2](https://github.com/danhuang1202/react-aspect-ratio-fence/commit/f2b2cd2)), closes [#3](https://github.com/danhuang1202/react-aspect-ratio-fence/issues/3)
+* refactor: bREAKING CHANGE: rename customClass to clssName for supporting styled component ([a2f7888](https://github.com/danhuang1202/react-aspect-ratio-fence/commit/a2f7888))
+
+
+### BREAKING CHANGE
+
+* rename customClass to clssName for supporting styled component
+
 ## <small>1.8.1 (2019-07-28)</small>
 
 * fix: replace first-of-type to first-child ([a84c74f](https://github.com/danhuang1202/react-aspect-ratio-fence/commit/a84c74f))
