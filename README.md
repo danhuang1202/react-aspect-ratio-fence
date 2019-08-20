@@ -20,7 +20,7 @@ npm i react-aspect-ratio-fence
   | --- | --- | --- | --- | --- |
   | elementType | string | false | div | html tag name for the wrap component |
   | ratio	| number | true |	1	| The aspect ratio of an image describes the proportional relationship between width and height |
-  | customClass	| string |	false | undefined | Custom class name |
+  | className	| string |	false | undefined | Custom class name |
   | children | ReactNode | false | undefined | custom children node |
 
 - AspectRatioFenceLegacy
@@ -32,7 +32,7 @@ npm i react-aspect-ratio-fence
   | outerElementType | string | false | div | html tag name for the outer component |
   | innerElementType | string | false | div | html tag name for the inner component  |
   | ratio	| number | true |	1	| The aspect ratio of an image describes the proportional relationship between width and height |
-  | customClass	| string |	false | undefined | Custom class name |
+  | className	| string |	false | undefined | Custom class name |
   | children | ReactNode | false | undefined | custom children node |
 
 - SquareFence
@@ -42,7 +42,7 @@ npm i react-aspect-ratio-fence
   | props | type | required | default | description |
   | --- | --- | --- | --- | --- |
   | elementType | string | false | div | html tag name for the wrap component |
-  | customClass	| string |	false | undefined | Custom class name |
+  | className	| string |	false | undefined | Custom class name |
   | children | ReactNode | false | undefined | custom children node |
 
 ## Way to Ride

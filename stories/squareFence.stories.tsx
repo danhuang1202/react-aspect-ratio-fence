@@ -17,7 +17,7 @@ storiesOf('Components', module)
   .add('SquareImg', () => (
     <SquareFence
       elementType={text('elementType', 'div')}
-      customClass={text('customClass', style.wrap)}
+      className={text('className', style.wrap)}
     >
       <img alt="placeholder" src="https://via.placeholder.com/1024x1024" />
     </SquareFence>
