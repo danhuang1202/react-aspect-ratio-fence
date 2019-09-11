@@ -23,9 +23,6 @@ module.exports = ({ config }) => {
       use: [
         {
           loader: 'babel-loader'
-        },
-        {
-          loader: require.resolve('react-docgen-typescript-loader')
         }
       ]
     }
