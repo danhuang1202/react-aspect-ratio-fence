@@ -1,3 +1,8 @@
+## <small>1.8.3 (2019-09-11)</small>
+
+* fix: remvoe react-docgen-typescript-loader from storybook webpack ([044b206](https://github.com/danhuang1202/react-aspect-ratio-fence/commit/044b206))
+* chore: remove unused package ([080f932](https://github.com/danhuang1202/react-aspect-ratio-fence/commit/080f932))
+
 ## <small>1.8.2 (2019-08-20)</small>
 
 * Merge pull request #3 from danhuang1202/styled-component ([f2b2cd2](https://github.com/danhuang1202/react-aspect-ratio-fence/commit/f2b2cd2)), closes [#3](https://github.com/danhuang1202/react-aspect-ratio-fence/issues/3)
