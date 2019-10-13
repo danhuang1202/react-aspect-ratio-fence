@@ -1,3 +1,8 @@
+## <small>1.8.4 (2019-10-13)</small>
+
+* fix: disable @typescript-eslint/ban-ts-ignore rule ([a39d493](https://github.com/danhuang1202/react-aspect-ratio-fence/commit/a39d493))
+* fix: update packages to fix security issue ([b32e432](https://github.com/danhuang1202/react-aspect-ratio-fence/commit/b32e432))
+
 ## <small>1.8.3 (2019-09-11)</small>
 
 * fix: remvoe react-docgen-typescript-loader from storybook webpack ([044b206](https://github.com/danhuang1202/react-aspect-ratio-fence/commit/044b206))
