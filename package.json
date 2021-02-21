@@ -45,14 +45,10 @@
   ],
   "author": "danhuang",
   "license": "ISC",
-  "dependencies": {
-    "classnames": "^2.2.6",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0"
-  },
+  "dependencies": {},
   "peerDependencies": {
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0",
+    "react": "^16.0.0 || ^17.0.0",
+    "react-dom": "^16.0.0 || ^17.0.0",
     "classnames": "^2.0.0"
   },
   "devDependencies": {
@@ -80,6 +76,7 @@
     "babel-jest": "^24.8.0",
     "babel-loader": "^8.0.5",
     "babel-plugin-css-modules-transform": "^1.6.2",
+    "classnames": "^2.2.6",
     "codecov": "^3.5.0",
     "commitizen": "^4.0.3",
     "cz-conventional-changelog": "^3.0.2",
@@ -92,6 +89,8 @@
     "lint-staged": "^8.1.6",
     "lodash.get": "^4.4.2",
     "prettier": "^1.17.0",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
     "react-test-renderer": "^16.8.6",
     "rollup": "^1.11.3",
     "rollup-plugin-alias": "^1.5.1",
